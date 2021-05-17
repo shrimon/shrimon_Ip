@@ -1,0 +1,11 @@
+$mediaBreakpoints: (
+    mobile: 23.4375rem, //375px
+    tablet: 48rem, //768px
+    desktop-sm: 64rem //1024px
+);
+
+@mixin media-query($size) {
+    @media (min-width: map-get($mediaBreakpoints, $size)) {
+        @content;
+    }
+}
